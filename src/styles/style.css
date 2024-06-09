@@ -1,0 +1,479 @@
+header {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    padding: 1em 0 !important;
+}
+
+header.active {
+    background: var(--heading-1);
+}
+
+header.active .header-title, header.active .menu-list a, header.active .nav-toggle{
+    color: var(--body-text-color);
+}
+
+header .lines, header .lines::after {
+  background: var(--heading-1);
+}
+
+header.active .lines, header.active .lines::after {
+    background: var(--body-text-color);
+}
+.header-content {
+    font-weight: 600;
+    text-transform: capitalize;
+
+    width: calc(100% - 3em);
+    margin: 0 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-title {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-title img{
+    width: 100%;
+}
+.nav-toggle {margin-left: auto; display: none;}
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.menu-list {
+  position: relative;
+}
+
+body {
+    background: var(--body-text-color);
+}
+.menu-list a {
+    color: var(--heading-1);
+    display: block;
+    padding: 0 1em;
+    margin: 0 1em;
+}
+
+.menu-list:first-child a {
+    padding-left: 0;
+    margin-left: 0;
+}
+.menu-list:last-child a {
+    padding-right: 0;
+    margin-right: 0;
+}
+
+
+.banner {
+    width: calc(100% - 3em);
+    max-width: 1400px;
+    margin: 0 auto;
+    height: inherit;
+    display: flex;
+        min-height: 100vh;
+}
+
+.banner-description, .banner-image {
+    flex: 1 1 0;
+}
+.banner-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.banner-title-container span {
+    color: var(--secondary-color);
+    position: relative;
+    z-index: 2;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+
+
+.banner-title-container h1  {
+    position: relative;
+    z-index: 2;
+    color: var(--body-text-color);
+    font-size: clamp(2em, 5vw, 10em);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px var(--heading-1),  -2px 2px var(--heading-1), 2px -2px var(--heading-1), -2px -2px var(--heading-1), 5px 5px 0px rgb(0 0 0 / 20%);
+}
+
+
+.banner-description p {
+     color: var(--secondary-color);
+    position: relative;
+    z-index: 2;
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+
+.banner-description .career {
+    color: var(--heading-1);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.banner-description .button {
+    position: relative;
+    z-index: 2;
+    padding: 0.5em 1em;
+    text-transform: capitalize;
+    background: black;
+    color: var(--body-text-color);
+    box-shadow: 0 0.2em 0.3em black;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.banner-description .button:hover {
+    transform: translateY(2px);
+    box-shadow: 0 0.1em 0.2em black;
+}
+
+.banner-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+.banner-image img {
+    position: static;
+    z-index: 2;
+    width: 100%;
+    max-width: 320px;
+    border-radius: 50%;
+    animation: rolling 2s, beat 1s infinite 2s;
+}
+
+.banner-description > .links  {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 1em;
+}
+.banner-description > .links > a
+, .contact a{
+    transition: 0.2s ease-in;
+}
+
+.banner-description > .links > a:hover,
+.contact a:hover{
+    color: #bcb8b1;
+}
+
+@keyframes rolling {
+    0% { transform: translateX(400%) rotate(360deg);}
+}
+
+@keyframes beat {
+    0% {
+        max-width: 310px;
+        filter: drop-shadow(0 0.2em 0.2em black);
+    }
+    50% {
+        max-width: 330px;
+        filter: drop-shadow(0 0.1em 0.5em black);
+    }
+
+    100% {
+        max-height: 350px;
+        filter: drop-shadow(0 0.4em 0.5em black);
+    }
+}
+
+
+.fa-brands {
+    font-size: 2em;
+    margin: 0 0.2em;
+}
+
+
+/* about  */
+.services {
+    position: relative;
+    z-index: 2;
+    background: #463f3a;
+  padding: 5em 0;
+}
+
+.services h2, .skill-content h2 {
+    color: var(--body-text-color);
+    text-shadow: 2px 2px  var(--body-text-color),  -1px 1px  var(--body-text-color), 1px -1px  var(--body-text-color), -2px -2px  var(--body-text-color), 5px 5px 0px rgba(238, 234, 234, 0.2);
+
+    margin-bottom: 1em;
+}
+.services-content {
+    color: white;
+    width: calc(100% - 3em);
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2em;
+}
+
+.services-content h3 {
+/*   color: black; */
+    color: var(--body-text-color);
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.service-content h4 {
+    letter-spacing: 2px;
+}
+.service {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em 0 5em;
+    gap: 1em;
+}
+
+.service > div {
+    width: 100%;
+    max-width: 300px;
+    min-height: 250px;
+    background: var(--secondary-color);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0.2em 0.2em 0.4em var(--black);
+    border-radius: 0.5em;
+}
+
+.service > div p {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+
+.service > div h4 {
+    position: relative;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+
+
+.service-icon {
+    margin-bottom: 0.5em;
+}
+
+
+/* about  */
+
+main > section h2 {
+  font-size: 1.5em;
+  text-align: center;
+  font-weight:  600;
+  text-transform: uppercase;
+  margin-bottom: 1.5em;
+  letter-spacing: 6px;
+  color: var(--heading-1);
+  text-shadow: 2px 2px var(--heading-1),  -1px 1px var(--heading-1), 1px -1px var(--heading-1), -2px -2px var(--heading-1), 5px 5px 0px rgb(0 0 0 / 20%);
+
+}
+
+
+.portfolio {
+    width: calc(100% - 3em);
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    padding:  5em 0;
+}
+
+.portfolio h2 {
+  margin-bottom: 2em;
+}
+
+
+.portfolio-content {
+    width: clamp(17em, 80%, 50em);
+    margin: 0 auto;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    
+}
+
+.projects {
+    color: var(--heading-1);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects:last-child {
+    color: var(--body-text-color);
+    grid-column: 1/-1;
+    height: unset;
+}
+
+.projects a{
+    font-weight: 600;
+    color: var(--body-text-color);
+    background: var(--heading-1);
+    transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+
+.projects .title {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--heading-1);
+    margin-bottom: 1em;
+}
+
+.projects img {
+  transition: 1s;
+  height: 250px;
+    object-fit: cover;
+    object-position: top;
+    object-view-box: revert;
+}
+
+.projects img:hover {
+    filter: blur(4px) grayscale(80%);
+    transform: scaleX(1.1);
+}
+
+.project-description {
+    color: var(--body-text-color);
+    font-weight: 600;
+    width: 100%;
+    padding: 1em;
+    background: var(--heading-1);
+}
+.projects:hover .project-description {
+    visibility: visible;
+}
+
+.project-description p {
+    margin-bottom: 1em;
+}
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.project-links a {
+    background: var(--secondary-color);
+    padding: 0.5em 1em;
+}
+
+.project-links a:hover {
+    color: var(--heading-1);
+    background: var(--body-text-color);
+}
+
+
+
+
+.about {
+  position: relative;
+  z-index: 2;
+  padding: 5em 0;
+}
+
+.about-content img {
+  border-radius: 50%;
+  max-width: 150px;
+  margin-bottom: 2em;
+}
+
+.about-content {
+  padding-bottom: 5em;
+}
+
+.about-content p {
+  color: var(--heading-1);
+  width: 100%;
+  max-width: 400px;
+  text-align: justify;
+}
+.skill-expertise {
+  padding: 5em 0;
+  background: var(--heading-1);
+}
+
+.skill-content, .about-content{
+  width: calc(100% - 3em);
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills {
+  display:  flex;
+  flex-wrap: nowrap;
+}
+
+.skills i {
+  color: var(--secondary-color);
+  font-size: clamp(2em, 2.5vw, 3em);
+}
+
+.hire-me {
+  width: calc(100% - 3em);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 6em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hire-me h2, .hire-me p, .hire-me .social-links {
+  position: relative;
+  z-index: 2;
+}
+
+.hire-me p {
+  color: var(--heading-1);
+}
+.social-links > .links {
+  margin-top: 1em;
+}
+
+
+.contact a {
+  font-weight: var(--semi-bold);
+  text-transform: capitalize;
+}
+footer {
+   position: relative;
+  z-index: 2;
+  background: var(--heading-1);
+  color: var(--body-text-color);
+  padding: 1em 0;
+  text-align: center;
+}
+

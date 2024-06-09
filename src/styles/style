@@ -1,0 +1,414 @@
+header styling start */
+
+    header {
+        position: fixed;
+        top: 0;
+        z-index: 9;
+        background: var(--white);
+        box-shadow: 0 0 0.3em var(--lighest-dark-grey);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 1.5em;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    header > .header-title {
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       font-size: calc(1.2em, 1.5vw, 2em);
+       text-transform: uppercase;
+       text-shadow: 1px 1px 2.5px;
+       user-select: none;
+    }
+
+    header .header-title > span {
+        font-size: 0.7em;
+    }
+    
+    header .header-title > h1 {
+        font-size: 1.4em;
+        font-family: var(--press);
+    }
+/* header styling end */
+
+/* menu styling start */
+    .menu-list {
+      position: relative;
+      display: inline-block;
+    }
+        
+    .menu-list:first-child  a{
+        animation: drops 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.05s ;
+    }
+    .menu-list:nth-child(2) a {
+        animation: drops 1.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+    }
+    .menu-list:nth-child(3) a{
+        animation: drops 1.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.15s ;
+    }
+    .menu-list:last-child a {
+        animation: drops 1.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+    }
+
+    .menu-list a {
+        color: var(--white);
+        margin-right: 1em;
+        padding: 0 2em;
+        text-shadow: 0 0 3px var(--dark-black);
+    }
+    
+    .menu-list:first-child a {padding-left: 0;}
+    .menu-list:last-child a {padding-right: 0; margin-right: 0;}
+    
+    .menu-list:hover {
+        animation: bounce 0.5s;
+        filter: drop-shadow(0.1em 0.1em 0.1em);
+    }
+
+    .menu-list a {margin-right: 0; display: block;}
+
+    /* menu styling end */
+    
+  
+/* main style start */
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* main > section {
+        opacity: 0;
+        transition: 150ms;
+    }
+
+    main > section.show {
+        opacity: 1;
+    } */
+
+    .banner, .portfolio, .hire-me {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    .banner, .portfolio, .hire-me  {
+        grid-column: 1/-1;
+    }
+    .banner, .about-me, .portfolio, .hire-me, .about-me-quote{
+        padding: 4em 0;
+        margin: 0 1em;
+    }
+
+    .portfolio h2, .about-me h2, .hire-me h2{
+        font-family: var(--press);
+        font-size: 1.5em;
+        text-transform: capitalize;
+        text-shadow: 0 0 0.1em black;
+        text-align: center;
+        margin: 1em 0;
+
+    }
+  /* banner styling start */
+  .banner {min-height: 100vh; display: flex;justify-content: space-between; align-items: center;transition: 0.5s;}
+  .banner-description {display: flex; flex-direction: column; align-items: flex-start; padding: 0 1em}
+  .banner-description h1 {font-size: 1.5em; margin-bottom: 1em;}
+  .banner-description h1 > span {
+      font-family: var(--press);
+      font-size: 2em;
+      vertical-align: sub;
+      text-shadow: 0 0 0.05em;
+  }
+  .banner-description, .banner-image {flex: 1 1 0;}
+  .banner-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .banner-description p {
+      font-size: 1.2em;
+      line-height: 1.3;
+      margin-bottom: 1em;
+  }
+  .banner-description button {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      font-family: var(--press);
+      color: var(--white);
+      background: var(--dark-black);
+      padding: 0.5em 1.5em;
+      transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .banner-image img:hover {
+      animation: bounceImage  infinite;
+  }
+  
+  .banner-image img {
+    width: 80%;
+ }
+  .banner-description button:hover {
+      padding: 0.5em 0;
+      text-shadow: 0 0 0.1em;
+      color: var(--dark-black);
+      background: transparent;
+  }
+
+ /* banner styling end */
+    /* .portfolio {} */
+
+   
+   
+    
+
+    
+    /* about styling start */
+
+    .about-me p {
+        text-align: justify;
+        line-height: 1.5;
+
+    }
+
+    .about-me-quote {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-me-quote q {
+        font-size: clamp(1.5em, 2vw, 3em);
+    }
+   
+    /* about styling end */
+
+
+/* main style end
+
+
+@media screen and (max-width: 69em) {
+    .projects:first-child {
+        height: 440px;
+        grid-row: unset;
+    }
+    .projects:nth-child(3) {
+        grid-row: unset;
+        grid-column: 1/3;
+    }
+
+    .projects:last-child {
+        height: unset;
+        grid-column: 1/3;
+    }
+
+}
+
+
+   @media screen and (max-width: 48em) {
+    /* header start */
+    body {
+        min-width: 345px;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        height: 100vh;
+        background: black;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 4.5em;
+        transition: 1s;
+    }
+    nav.active {
+       right: 0;
+    }
+
+    .about-me, .about-me-quote {
+        grid-column: 1/-1;
+    }
+
+    .menu {width: 100%;}
+
+    .menu-list{display: block; margin-bottom: 1em;}
+    .menu-list:last-child {margin-bottom: unset;}
+
+    .menu-list a {
+        padding: 1.5em;
+    }
+
+    .menu-list:first-child a {padding-left: 1.5em;}
+    .menu-list:last-child a {padding-right: 1.5em;}
+    .nav-toggle {
+        position: relative;
+        z-index: 9999;
+        width: 2em;
+        height: 2em;
+        border: none;
+        background: none;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-toggle:hover .lines {
+        width: 1em;
+        
+    }
+
+    .lines{position: relative; transition: width 0.5s;}    
+   .lines, .lines::before, .lines::after {
+        content: '';
+        width: 2em;
+        height: 0.25em;
+        background: black;
+        box-sizing: 0 0 2px grey;
+    }
+    .lines::before, .lines::after {position: absolute; transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) }
+    
+    .lines::before{top: 0.5em; left: 0;} 
+    .lines::after{top: -0.5em; left: 0;}
+    
+   .nav-toggle.x-mark  .lines::before,
+   .nav-toggle.x-mark  .lines::after { transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;}
+   .nav-toggle.x-mark .lines{background: none; width: 2em; background: none;}    
+   .nav-toggle.x-mark .lines::before{top: 0; transform: rotate(-45deg); background: var(--white);} 
+   .nav-toggle.x-mark .lines::after{top: 0; transform: rotate(45deg); background: var(--white);}
+
+
+
+    /* header end */
+   /* main max 48 em styling */
+   .banner {flex-direction: column;justify-content: center  ;}
+ 
+   .banner-description { flex-direction:column; justify-content: center; }
+
+    /* main max 48 em styling */
+
+   .projects:first-child, .projects:nth-child(2){
+    grid-column: 1/3;
+}
+
+    .about-me-quote q {
+        font-size: 1.5em;
+    }
+   
+   
+<!-- 
+<header>
+    <div class="header-title">
+        <span>mr</span>
+        <h1 class="logo">beans</h1>
+    </div>
+    <!-- navigation toggle -->
+    <!-- <button class="nav-toggle">
+        <span class="lines"></span>
+    </button>
+    <!-- navigation toggle -->
+    <!-- navigation menu -->
+    <nav>
+        <ul class="menu">
+            <li class="menu-list"><a href="#home">home</a></li>
+            <li class="menu-list"><a href="#about-me">about</a></li>
+            <li class="menu-list"><a href="#portfolio">portfolio</a></li>
+            <li class="menu-list"><a href="#hire">hire me</a></li>
+        </ul>
+    </nav> -->
+    <!-- navigation menu -->
+</header>
+
+<!-- main start -->
+<main class="">
+    <!-- banner start -->
+        <section class="banner" id="home">
+            <div class="banner-description"data-aos="zoom-out"   data-aos-delay="800" > 
+            <h1 class="banner-title">Hola! I'm <span>Beans</span></h1>
+            <p>a front-end developer, with a passion for creating visually and stunning modern websites.</p>
+            <button>hire me!</button>
+            </div>
+            <div class="banner-image" data-aos="zoom-in-left"   data-aos-delay="900">
+                <img loading="lazy" src="./src/images/image.png" alt="">
+            </div>
+        </section> 
+    <!-- banner end -->
+    <!-- about me start / my motivation quote-->
+    <section class="about-me" id="about-me">
+        <h2>about me</h2>
+        <div class="about-me-description" data-aos="zoom-in">
+          <p>I am Vince Clave, a highly motivated and dedicated individual currently pursuing a Bachelor of Science in Information Technology. My passion lies in front-end development, as it allows me to express my creativity and utilize my technical skills. In my free time, I enjoy staying active through activities such as basketball and video games. I am always seeking new opportunities to learn and grow, and I am eager to apply my skills and knowledge to make a positive impact in the field of information technology.</p>
+            <div class="about-me-stacks"></div>
+        </div>
+    </section>
+    <section class="about-me-quote" data-aos="zoom-in-up">
+        <p>favorite quote:</p>
+        <q>sometimes later
+           becomes never.
+           do it now. 
+        </q>
+    </section>
+    
+     <!-- about me end / my motivation quote  -->
+    <!-- portfolio start -->
+    <section class="portfolio" id="portfolio">
+        <h2>my porfolio</h2>
+            <article class="portfolio-content">
+                <div class="projects"  data-aos="fade-left"  data-aos-delay="1000">
+                    <h3 class="title">blogr</h3>
+                    <img src="./src/images/blogr.jpg" loading="lazy"  alt="">
+                    <div class="project-description">
+                        <p>A responsive website landing page. used tool html, css, js</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Vinceclave/FEM-Blogr">view source</a>
+                            <a href="https://vinceclave.github.io/FEM-Blogr/">view live</a>
+                        </div>
+                    </div>
+                </div>
+          
+                <div class="projects"  data-aos="fade-right"  data-aos-delay="1000">
+                    <h3 class="title">crowfunding</h3>
+                    <img src="./src/images/crowdfunding.jpg"  loading="lazy"  alt="">
+                    <div class="project-description">
+                        <p>A responsive website landing page. used tool html, css, js</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Vinceclave/crowdfunding-product-page-main">view source</a>
+                            <a href="https://vinceclave.github.io/crowdfunding-product-page-main/">view live</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects" data-aos="fade-left"  data-aos-delay="1000">
+                    <h3 class="title">abstract landing page</h3>
+                    <img src="./src/images/C2-abstract.webp"  loading="lazy"  alt="">
+                    <div class="project-description">
+                        <p>A responsive website landing page. used tool html, css, js</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Vinceclave/Abstract-landing-page">view source</a>
+                            <a href="https://vinceclave.github.io/Abstract-landing-page/">view live</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects"  data-aos="fade-right"  data-aos-delay="1000">
+                    <h3 class="title">advice generator</h3>
+                    <img src="./src/images/advice-generator.jpg"  loading="lazy"  alt="">
+                    <div class="project-description">
+                        <p>A responsive website that can generate random advice. used tool html, css, js, api.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Vinceclave/advice-generator">view source</a>
+                            <a href="https://vinceclave.github.io/advice-generator/">view live</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+    </section>
+ <!--  portfolio end -->
+
+     <!-- hire me start -->
+     <!-- <section class="hire-me" id="hire">
+        <h2>hire me</h2>
+     </section> -->
+     <!-- hire me end -->
+  </main>

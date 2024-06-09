@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- cdn libraries  -->
+    <title>Beans | Portfolio</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@1,700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- cdn libraries  -->
+    <!-- style sheets -->
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/media.css">
+    <link rel="stylesheet" href="src/styles/animation.css">
+    <!-- style sheets -->
+</head>
+<body id="particles-js">
+    <!-- mobile feature -->
+    <div class="blur"></div>
+   <div class="back-to-top">
+      <a href="#home" aria-label="down-button">
+        <span class="material-symbols-outlined">
+arrow_upward
+</span>
+      </a>
+    </div>
+    <!-- mobile feature -->
+    <div class="clear-fix">
+       <!-- header content -->
+        <header>
+            <div class="header-content">
+                <a class="header-title" href="#home">
+                    <img src="./src/images/header-logo.png" alt="" loading="lazy">
+                </a>
+                <button class="nav-toggle">
+                    <div class="lines"></div>
+                    <i aria-label="menu">menu</i>
+                </button>
+                <nav>
+                    <ul class="menu">
+                        <li class="menu-list">
+                            <a href="#services">services</a>
+                        </li>
+                        <li class="menu-list">
+                            <a href="#portfolio">portfolio</a>
+                        </li>
+                        <li class="menu-list">
+                            <a href="#about">about</a>
+                        </li>
+                        <li class="menu-list">
+                            <a href="#hire-me">hire me</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- header content -->
+
+        <!-- main content -->
+        <main>
+           <!-- banner section -->
+            <section class="banner" id="home">
+                    <article class="banner-description">
+                        <div class="banner-title-container">
+                            <div class="banner-subtitle">
+                                <span>Hola, My name is</span>
+                            </div>
+                                <h1>Vince Clave Igot</h1>
+                        </div>
+                        <p>A <span class="career">front-end developer</span>, with a passion for creating visually and stunning modern websites.</p>
+                        <div class="links">
+                            <a href="https://www.linkedin.com/in/vince-clave-igot-0338b8232/">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.facebook.com/vince.clave.94">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="https://github.com/Vinceclave">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                        <a class="button" href="./src/Resume.pdf">download cv</a>
+                    </article>
+                    <article class="banner-image">
+                        <img src="./src/images/photo-1.jpg" alt="">
+                    </article>
+                    <div class="drop">
+                        <a href="#portfolio">
+                            View my projects 
+                            <span class="material-symbols-outlined">
+                            arrow_downward
+                            </span></a>
+                    </div>
+            </section>
+            <!-- banner section -->
+
+               <!-- about section -->
+            <section class="services" id="services">
+                <h2>Services</h2>
+                
+                <article class="services-content">
+                    <h3 >Services I Offer</h3>
+                    <div class="service">
+                        <div class="service-web-development" data-aos="fade-up" data-aos-delay="300">
+                            <span class="service-icon material-symbols-outlined">
+                                code
+                                </span>
+                            <h4>development</h4>
+                            <p>I spealize creating custom website using the latest technologies.
+                            </p>
+                        </div>
+                        <div class="service-mobile-responsive" data-aos="zoom-in" data-aos-delay="400">
+                            <span class="service-icon material-symbols-outlined">
+                                space_dashboard
+                                </span>
+                            <h4>responsive layout</h4>
+                            <p>I create responsive website to look great and presentable
+                                to clients.
+                            </p>
+                        </div>
+                        <div class="service-web-design" data-aos="fade-down" data-aos-delay="500">
+                            <span class="service-icon material-symbols-outlined">
+                                draw
+                                </span>
+                            <h4>design</h4>
+                            <p>I create visually appealing and user-friendly websites.</p>
+                        </div>
+
+                    </div>
+                </article>
+            </section>
+            <!-- about section -->
+
+          <!-- portfolio section -->
+            <section class="portfolio" id="portfolio">
+                <h2>my works</h2>
+                <article class="portfolio-content">
+                    <div class="projects"  data-aos="zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"> 
+                        <h3 class="title">blogr</h3>
+                        <img src="./src/images/blogr.jpg" loading="lazy"  alt="">
+                        <div class="project-description" >
+                            <p>A responsive website landing page. used tool html, css, js</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Vinceclave/FEM-Blogr">view source</a>
+                                <a href="https://vinceclave.github.io/FEM-Blogr/">view live</a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="projects" data-aos="zoom-out" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0">
+                        <h3 class="title">crowfunding</h3>
+                        <img src="./src/images/crowdfunding.jpg"  loading="lazy"  alt="">
+                        <div class="project-description">
+                            <p>A responsive website landing page. used tool html, css, js</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Vinceclave/crowdfunding-product-page-main">view source</a>
+                                <a href="https://vinceclave.github.io/crowdfunding-product-page-main/">view live</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects"  data-aos="zoom-in" data-aos-easing="ease-in-back" data-aos-delay="400" data-aos-offset="0">
+                        <h3 class="title">abstract landing page</h3>
+                        <img src="./src/images/C2-abstract.webp"  loading="lazy"  alt="">
+                        <div class="project-description">
+                            <p>A responsive website landing page. used tool html, css, js</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Vinceclave/Abstract-landing-page">view source</a>
+                                <a href="https://vinceclave.github.io/Abstract-landing-page/">view live</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects"  data-aos="zoom-out" data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0">
+                        <h3 class="title">sunnyside</h3>
+                        <img src="./src/images/sunnyside.jpg"  loading="lazy"  alt="">
+                        <div class="project-description">
+                            <p>A responsive website that can generate random advice. used tool html, css, js</p>
+
+                            <div class="project-links">
+                                <a href="https://github.com/Vinceclave/sunnyside">view source</a>
+                                <a href="https://vinceclave.github.io/sunnyside/">view live</a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="projects" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0">
+                        <h3 class="title">advice generator</h3>
+                        <img src="./src/images/advice-generator.jpg"  loading="lazy"  alt="">
+                        <div class="project-description">
+                            <p>A responsive website that can generate random advice. used tool html, css, js, api.</p>
+
+                            <div class="project-links">
+                                <a href="https://github.com/Vinceclave/advice-generator">view source</a>
+                                <a href="https://vinceclave.github.io/advice-generator/">view live</a>
+                           </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!-- portfolio section -->
+<!-- about me section -->
+   <section class="about" id="about">
+     <article class="about-content">
+       <h2>about me</h2>
+       <p data-aos="zoom-out-down"  data-aos-delay="500">Eversince i don't have any interest related into technologies. Yet here am  enjoying the moments exploring programming languages.
+
+         Right now i am focused on learning React. I used that for creating Static websites and also for Dynamic for my styling i use tailwind css it was a great combination. While exploring i'm having a great time because it adds a sense of challenge.
+       </p>
+     </article>
+      <article class="skill-expertise">
+        <div class="skill-content">
+       <h2>skill expertise</h2>
+       <div class="skills">
+         <i class="fa-brands fa-js fa-bounce"  data-aos="zoom-out-right"></i>
+         <i class="fa-brands fa-html5 fa-bounce"  data-aos="zoom-out-right"   data-aos-delay="300"></i>
+         <i class="fa-brands fa-css3-alt fa-bounce"  data-aos="zoom-out-right"   data-aos-delay="500"></i>
+         <i class="fa-brands fa-php fa-bounce"  data-aos="zoom-out-right"   data-aos-delay="700"></i>
+         <i class="fa-brands fa-figma fa-bounce"  data-aos="zoom-out-right"   data-aos-delay="900"></i>
+       </div> 
+        </div>
+      </article>
+       
+   </section>
+<!-- about me section -->       
+            <!-- hire me section -->
+            <section class="hire-me" id="hire-me">
+                <article class="contact">
+                    <h2>Contact Me</h2>
+                    <p>Get in touch with me <a href="mailto:vinceclave9@gmail.com">vinceclave9@gmail</a></p>
+                    <div class="social-links">
+                        <h5>or find me on:</h5>
+                        <div class="links">
+                            <a href="https://www.linkedin.com/in/vince-clave-igot-0338b8232/">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.facebook.com/vince.clave.94">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="https://github.com/Vinceclave">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!-- hire me section -->
+        </main>
+        <!-- main content -->
+    <footer>
+      <p>Copyright &copy; 2022 beans All rights reserved.</p>
+    </footer>
+  </div>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EL0GC5VEVE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EL0GC5VEVE');
+  </script>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./node_modules/particles.js/particles.js"></script>
+    <script src="./node_modules/particles.js/demo/js/app.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>
